@@ -1,0 +1,265 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} About Us {% endblock title %}
+
+{% block content%}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .about{
+    height: 80vh;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about .main_1 img{
+    width: 580px;
+    max-width: 100%;
+    height:auto;
+    padding: 0 10px;
+  }
+
+  .all-text{
+    width: 600px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .main_1{
+    width: 1290px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .all-text h4{
+    font-family: 'Dosis', sans-serif;
+    font-size: 18px;
+    color: #777777;
+    letter-spacing: 1px;
+    font-weight: 400px;
+    margin-bottom: 10px;
+}
+.all-text h1{
+  font-family: 'Dosis', sans-serif;
+    font-size: 30px;
+    color: #111111;
+    font-weight: 700;
+    margin-bottom: 20px;  
+}
+
+.all-text p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #777777;
+    line-height: 30px;
+    margin-bottom: 35px;
+}
+
+p span{
+  color: #1746A2;
+}
+
+/* .btn button{
+  background: white;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #111111;
+  border-radius: 20px;
+  border: none; 
+  outline: none;
+  box-shadow: px 16px 32px 0px rgb(0 0 0 / 6%);
+  margin-left: -10px;
+}
+
+.btn button:hover{
+  background-color: #fb9857;
+  color: #fff;
+  transition: .3s;
+  cursor: pointer;
+} */
+
+@media screen and (max-width: 1250px) {
+  .about{
+    width: 100%;
+    height: auto;
+    padding: 60px 0;
+  }
+  .all-text{
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+
+.card_1{
+  margin-left: 15%;
+  margin-top: 4%;
+}
+
+h3{
+  font-family: 'Dosis', sans-serif;
+  font-size:30px;
+  font-weight:bold;
+  font-style:normal;
+  text-decoration:none;
+  text-transform:uppercase;
+  margin: 0;
+  padding: 0;
+  color: #1746A2;
+  text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+  .about .main_1 img {
+    margin-bottom: 35px;
+  }
+  .all-text h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+}
+.badge{
+  background-color:#1746A2;
+  color:#fff;
+}
+.card{
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.card img{
+  width: 100%;
+  display: block;
+  transition: transform 1s;
+}
+
+.card img:hover{
+  transform: scale(1.1);
+}
+
+</style>
+
+<section class="about">
+  <div class="main_1">
+    <img src="{% static  'images/SporDiose.png' %}" alt="">
+    <div class="all-text">
+      <h4>We SporDiose</h4>
+      <h1>A House of Creative & Intelligent Writers</h1>
+      <h4><span class="badge bg-primary" style="color:#ffffff;">SporDiose</span></h4>
+      <p align="justify"> <span>SporDiose</span> Media is a media outlet that aims at  entertaining and educating readers about 
+        the world of sports, luxury and fashion. We provide our 
+        writers with the freedom to express their thoughts and ideas, while also reporting on 
+        relevant information. 
+        We are SporDiose Media and we believe in being creatively newsworthy.</p>
+        <!-- <div class="btn">
+          <span class="badge rounded-pill text-bg-light">Light</span>
+        </div> -->
+    </div>
+  </div>
+</section>
+
+<div class="text-center">
+  <img src="{% static 'images/nithin.jpg' %}" class="rounded" alt="..." width="300px">
+  <h5 style="margin-top:10px;">Nithin Joseph</h5>
+  <p class="text-muted">Founder & Editor - in - Cheif</p>
+</div>
+<br><br><br>
+
+<h3>Sports Editors</h3>
+<section class="card_1">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static  'images/rohan.jpg' %}" alt=""class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Rohan Sudhir</h5>
+            <h5><span class="badge">Co-Editor - Sports</span></h5>    
+          </div>
+        </div>      
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static  'images/srivibha.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Srivibha Kashyap</h5>
+            <h5><span class="badge">Co-Editor - Sports</span></h5>    
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+</section>
+<br><br><br>
+<h3>Luxury & Fashion Editors</h3>
+<section class="card_1">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <!-- <img src="{% static  'images/aarti.jpg' %}" class="card-img-top" alt="..."> -->
+          <div class="card-body">
+            <!-- <h5 class="card-title">Aarti Sudhir</h5> -->
+            <h5><span class="badge">Co-Editor - Luxury & Fashion</span></h5>    
+          </div>
+        </div>      
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static  'images/iva.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Iva Das</h5>
+            <h5><span class="badge">Co-Editor - Luxury & Fashion</span></h5>    
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+</section>
+
+<br><br><br>
+<h3>Social Media Handlers</h3>
+<section class="card_1">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static  'images/anshuman.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Anshuman</h5>
+            <h5><span class="badge">Social Media - Sports</span></h5>    
+          </div>
+        </div>      
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static  'images/sha_shank.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Shashank Gowda</h5>
+            <h5><span class="badge">Social Media - Luxury & Fashion</span></h5>    
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+{% endblock %}
+
