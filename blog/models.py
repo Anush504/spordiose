@@ -55,11 +55,11 @@ class Blog(models.Model):
         blank=True
     )
     title = models.CharField(
-        max_length=250
+        max_length=500
     )
     slug = models.SlugField(null=True, blank=True)
     banner = models.ImageField(upload_to='blog_banners')
-    description = RichTextField()
+    description = RichTextField(max_length=5000)
     created_date = models.DateField(auto_now_add=True)
 
     def __str__(self) -> str:
