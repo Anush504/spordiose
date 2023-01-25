@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-0ebap7n0ozdz48o9)*i9v-i&ss@tvsetv4^(!wuoiton@aaux6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["www.spordiose.com", "spordiose.com"]
 
@@ -137,11 +137,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
-MEDIA_ROOT = os.path.join(BASE_DIR , 'media')
-STATIC_ROOT = os.path.join(BASE_DIR , 'staticfiles')
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

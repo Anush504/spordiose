@@ -58,8 +58,8 @@ class Blog(models.Model):
         max_length=500
     )
     slug = models.SlugField(null=True, blank=True)
-    banner = models.ImageField(null=True, blank=True, upload_to="blog_banners/")
-    description = RichTextField(null=True, blank=True, max_length=5000)
+    banner = models.ImageField(null=False, blank=False, upload_to="blog_banners/")
+    description = RichTextField(null=False, blank=False, max_length=5000)
     created_date = models.DateField(auto_now_add=True)
 
     def __str__(self) -> str:
