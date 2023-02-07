@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'user_profile',
     'notification',
     'ckeditor',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -164,3 +165,12 @@ if os.getcwd() == '/app':
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SECURE_SSL_REDIRECT = True
     DEBUG = False
+
+
+AWS_ACCESS_KEY_ID = 'AKIA4ULWIBISMTQ45DYB'
+AWS_SECRET_ACCESS_KEY='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'
+AWS_STORAGE_BUCKET_NAME='spordiose-blog-bucket'
+AWS_S3_FILE_OVERWRITE= False
+AWS_DEFAULT_ACL=None
+DEFAULT_FILE_STORAGE='storages.backends.s3boto3.S3Boto3Storage'
+
