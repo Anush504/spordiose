@@ -55,7 +55,7 @@ class Blog(models.Model):
         blank=True
     )
     title = models.CharField(
-        max_length=500
+        max_length=50000
     )
     slug = models.SlugField(null=True, blank=True)
     banner = models.ImageField(null=False, blank=False, upload_to="blog_banners/")
